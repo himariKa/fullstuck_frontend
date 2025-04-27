@@ -1,8 +1,42 @@
 export default function Page(){
     return (
-        <div>
+        <>
             <h2>商品一覧</h2>
-            <p>商品の一覧を表示</p>
-        </div>
+            <button>商品の一覧を表示</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品ID</th>
+                        <th>商品名</th>
+                        <th>単価</th>
+                        <th>説明</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>コットン100%の小太郎のぬいぐるみ</td>
+                        <td>8900</td>
+                        <td>小太郎の可愛さであなたも必ず深い眠りにつくことができるでしょう</td>
+                        <td><button>更新・削除</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>木でできたピーちゃんの置き物</td>
+                        <td>990</td>
+                        <td>まるでピーちゃんのようなかわいさにあなたはきっとメロメロです</td>
+                        <td><button>更新・削除</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>森の笑顔の写真</td>
+                        <td>77777</td>
+                        <td>森の笑顔の写真は家族みんなの元気の源。</td>
+                        <td><button>更新・削除</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </>
     )
 }
