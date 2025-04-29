@@ -1,4 +1,24 @@
+'use client'
+
+import { useState, useEffect } from "react";
+import productsData from "./sample/dummy_products.json";
+import Link from "next/link";
+
+type ProductData = {
+    id :number;
+    name :string;
+    price :number;
+    description: string;
+};
+
 export default function Page(){
+    //　読み込みデータを保持
+    const [data, setData] = useState<Array<ProductData>>([]);
+
+    useEffect(() => {
+        setData(productsData);
+    }, [])
+
     return (
         <>
             <h2>商品一覧</h2>
@@ -11,30 +31,20 @@ export default function Page(){
                         <th>単価</th>
                         <th>説明</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>コットン100%の小太郎のぬいぐるみ</td>
-                        <td>8900</td>
-                        <td>小太郎の可愛さであなたも必ず深い眠りにつくことができるでしょう</td>
-                        <td><button>更新・削除</button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>木でできたピーちゃんの置き物</td>
-                        <td>990</td>
-                        <td>まるでピーちゃんのようなかわいさにあなたはきっとメロメロです</td>
-                        <td><button>更新・削除</button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>森の笑顔の写真</td>
-                        <td>77777</td>
-                        <td>森の笑顔の写真は家族みんなの元気の源。</td>
-                        <td><button>更新・削除</button></td>
-                    </tr>
+                    {data.map((data: any) => (
+                        <tr key={data.id}>
+                            <td>{data.id}</td>
+                            <td>{data.name}</td>
+                            <td>{data.price}</td>
+                            <td>{data.description}</td>
+                            <td><Link href={`/inventory/products/${data.id}`}>在庫処理</Link></td>
+                            <td><button>更新・削除</button></td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </>
