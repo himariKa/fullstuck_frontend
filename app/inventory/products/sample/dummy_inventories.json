@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "type": "卸し",
+      "date": "2024-04-09 21:44:32",
+      "unit": 5999,
+      "quantity": 2,
+      "price": 600,
+      "inventory": 390
+    },
+    {
+      "id": 2,
+      "type": "仕入れ",
+      "date": "2024-04-10 10:15:12",
+      "unit": 7890,
+      "quantity": 3,
+      "price": 850,
+      "inventory": 310
+    },
+    {
+      "id": 3,
+      "type": "卸し",
+      "date": "2024-04-11 14:28:45",
+      "unit": 4500,
+      "quantity": 1,
+      "price": 500,
+      "inventory": 295
+    },
+    {
+      "id": 4,
+      "type": "仕入れ",
+      "date": "2024-04-12 09:03:20",
+      "unit": 6200,
+      "quantity": 4,
+      "price": 720,
+      "inventory": 275
+    },
+    {
+      "id": 5,
+      "type": "卸し",
+      "date": "2024-04-13 18:52:11",
+      "unit": 5800,
+      "quantity": 2,
+      "price": 640,
+      "inventory": 260
+    }
+  ]
