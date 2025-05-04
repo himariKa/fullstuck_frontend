@@ -14,7 +14,7 @@ type ProductData = {
 type InventoryData = {
     id :number;
     type :string;
-    date :number;
+    date :string;
     unit: number;
     quantity :number;
     price :number;
