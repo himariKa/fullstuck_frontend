@@ -1,4 +1,26 @@
+"use client";
+
 import React from "react";
+import styles from "./products/styles.module.css";
+
+import {
+    AppBar,
+    Box,
+    Button,
+    Divider,
+    Drawer,
+    IconButton,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemText,
+    ThemeProvider,
+    Toolbar,
+    Typography,
+} from "@mui/material";
+import { Logout as LogoutIcon, Menu as MenuIcon } from "@mui/icons-material";
+
+
 
 export default function InventryLayout({
     children,
@@ -6,15 +28,15 @@ export default function InventryLayout({
     children: React.ReactNode;
 }){
     return (
-        <div className="layout">
-            <header className="header">ヘッダー</header>
-            <div className="container">
-                <aside className="navbar">サイドバー</aside>
-                <main className="content">
+        <div className={styles.layout}>
+            <header className={styles.header}>ヘッダー</header>
+            <div className={styles.container}>
+                <aside className={styles.navbar}>サイドバー</aside>
+                <main className={styles.content}>
                     <section>{ children }</section>
                 </main>
             </div>
-            <footer className="footer">フッター</footer>
+            <footer className={styles.footer}>フッター</footer>
         </div>
     )
 }
